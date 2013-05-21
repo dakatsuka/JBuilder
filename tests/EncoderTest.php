@@ -1,8 +1,8 @@
 <?php
 
-namespace JBuilder\Tests;
+namespace JBuilder\Common\Tests;
 
-use JBuilder\Encoder;
+use JBuilder\Common\Encoder;
 
 class EncoderTest extends \PHPUnit_Framework_TestCase
 {

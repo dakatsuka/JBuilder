@@ -1,5 +1,5 @@
 {
-    "name": "jbuilder/jbuilder",
+    "name": "jbuilder/common",
     "type": "library",
     "description": "This is a library for creating the structure of the JSON for PHP 5.4+",
     "keywords": ["json", "library"],
@@ -15,7 +15,7 @@
         "php": ">=5.4"
     },
     "autoload": {
-      "psr-0": { "JBuilder": "src/" }
+      "psr-0": { "JBuilder\\Common": "src/" }
     },
     "minimum-stability": "dev"
 }

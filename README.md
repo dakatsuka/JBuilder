@@ -3,7 +3,7 @@
 This is a library for creating the structure of the JSON for PHP.
 
 ```php
-use JBuilder\Encoder;
+use JBuilder\Component\Encoder;
 
 echo Encoder::encode(function($json) use ($comments) {
     $json->title = "This is a pen";
@@ -58,7 +58,7 @@ Add this lines to your composer.json:
 ```json
 {
     "require": {
-        "jbuilder/jbuilder": "dev-master"
+        "jbuilder/common": "dev-master"
     }
 }
 ```

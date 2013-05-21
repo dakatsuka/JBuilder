@@ -1,6 +1,6 @@
 <?php
 
-namespace JBuilder;
+namespace JBuilder\Common;
 
 /**
  * JSON Object
