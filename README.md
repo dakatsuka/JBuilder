@@ -3,7 +3,7 @@
 This is a library for creating the structure of the JSON for PHP.
 
 ```php
-use JBuilder\Component\Encoder;
+use JBuilder\Common\Encoder;
 
 echo Encoder::encode(function($json) use ($comments) {
     $json->title = "This is a pen";
