@@ -19,7 +19,7 @@ class JBuilderTest extends \PHPUnit_Framework_TestCase
     public function testEncode_Array()
     {
         $result = JBuilder::encode(function($json) {
-            $json->buildArray([1, 2, 3], function($json, $number) {
+            $json->buildArray(array(1, 2, 3), function($json, $number) {
                 $json->id = $number;
             });
         });
@@ -32,9 +32,9 @@ class JBuilderTest extends \PHPUnit_Framework_TestCase
         $result = JBuilder::encode(function($json) {
             $json->name = "Dai";
             $json->age  = 30;
-            $json->items(['item1', 'item2', 'item3'], function($json, $item) {
+            $json->items(array('item1', 'item2', 'item3'), function($json, $item) {
                 $json->name = $item;
-                $json->parts(['part1', 'part2'], function($json, $item) {
+                $json->parts(array('part1', 'part2'), function($json, $item) {
                     $json->name = $item;
                 });
             });
