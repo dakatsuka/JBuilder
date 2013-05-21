@@ -17,6 +17,5 @@
     "autoload": {
       "psr-0": { "JBuilder": "src/" }
     },
-    "target-dir": "JBuilder/JBuilder",
     "minimum-stability": "dev"
 }
