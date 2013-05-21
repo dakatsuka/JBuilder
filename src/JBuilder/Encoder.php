@@ -3,19 +3,19 @@
 namespace JBuilder;
 
 /**
- * Class JBuilder
+ * Class Encoder
  *
  * @package JBuilder
  * @license The MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-class JBuilder
+class Encoder
 {
     /**
      * Encode JSON
      *
      * inline example:
      *
-     *     $response = JBuilder::encode(function($json) {
+     *     $response = Encoder::encode(function($json) {
      *         $json->name = "Dai";
      *         $json->age  = 30;
      *     });
@@ -40,7 +40,7 @@ class JBuilder
      *
      * inline example:
      *
-     *     echo JBuilder::encodeFromFile('/path/to/index.json.php');
+     *     echo Encoder::encodeFromFile('/path/to/index.json.php');
      *
      * @param $file
      * @param array $parameters

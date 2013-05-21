@@ -2,13 +2,13 @@
 
 namespace JBuilder\Tests;
 
-use JBuilder\JBuilder;
+use JBuilder\Encoder;
 
-class JBuilderTest extends \PHPUnit_Framework_TestCase
+class EncoderTest extends \PHPUnit_Framework_TestCase
 {
     public function testEncode_Hash()
     {
-        $result = JBuilder::encode(function($json) {
+        $result = Encoder::encode(function($json) {
             $json->name = "Dai";
             $json->age  = 30;
         });
@@ -18,7 +18,7 @@ class JBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testEncode_Array()
     {
-        $result = JBuilder::encode(function($json) {
+        $result = Encoder::encode(function($json) {
             $json->buildArray(array(1, 2, 3), function($json, $number) {
                 $json->id = $number;
             });
@@ -29,7 +29,7 @@ class JBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testEncode_NestedArray()
     {
-        $result = JBuilder::encode(function($json) {
+        $result = Encoder::encode(function($json) {
             $json->name = "Dai";
             $json->age  = 30;
             $json->items(array('item1', 'item2', 'item3'), function($json, $item) {
@@ -45,7 +45,7 @@ class JBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testEncode_NestedHash()
     {
-        $result = JBuilder::encode(function($json) {
+        $result = Encoder::encode(function($json) {
             $json->users(function($json) {
                 $json->name = "Dai";
                 $json->age  = 30;
@@ -62,7 +62,7 @@ class JBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testEncodeFromFile()
     {
-        $result = JBuilder::encodeFromFile(dirname(__FILE__).'/views/users.json.php', array('name' => 'Dai'));
+        $result = Encoder::encodeFromFile(dirname(__FILE__).'/views/users.json.php', array('name' => 'Dai'));
         $this->assertEquals('{"name":"Dai","age":30}', $result);
     }
 }

@@ -3,9 +3,9 @@
 This is a library for creating the structure of the JSON for PHP.
 
 ```php
-use JBuilder\JBuilder;
+use JBuilder\Encoder;
 
-echo JBuilder::encode(function($json) use ($comments) {
+echo Encoder::encode(function($json) use ($comments) {
     $json->title = "This is a pen";
     $json->created_at = (new \DateTime())->format(\DateTime::ISO8601);
     $json->updated_at = (new \DateTime())->format(\DateTime::ISO8601);
